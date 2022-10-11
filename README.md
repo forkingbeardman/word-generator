@@ -3,7 +3,7 @@
 
 This project is born of boredome and having an aspiring typeface designer as a sister.
 
-Heavily inspired (one might say copied the idea from) https://www.adhesiontext.com/ by Miguel Sousa 
+Heavily inspired by (one might say copied the idea from) https://www.adhesiontext.com/ by Miguel Sousa 
 adhesiontext tool is amazing for typography during the process of developing fonts as it generates a text using real words from input letters. This can be used to preview only the parts of the font you have finished and/or help identify kerning issues.
 However, it lacked the support of georgian language which made me cobble up this solution.
 
