@@ -4,9 +4,11 @@ header('Content-Type: text/html; charset=utf-8');
 ?>
 
 <head>
+	<title>Georgian Word Generator</title>
 	<meta charset="UTF-8">
-	<meta name="keywords" content="HTML, CSS, JavaScript">
-	<meta name="description" content="Text Gen">
+	<meta name="keywords" content="Georgian, Words, Generator, Alphabet, Typography, Help, Placehoplder, Text">
+	<meta name="author" content="ForkingBeardman">
+	<meta name="description" content="Generate Random Georgian words using only the characters provided">
 	<link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 
@@ -50,7 +52,7 @@ header('Content-Type: text/html; charset=utf-8');
 					//then you can use them in a PHP function. 
 					$result = my_text_finder($val1);
 					foreach ($result as $res) {
-						$text .=  $res. " ";
+						$text .=  $res . " ";
 					}
 				}
 				echo $text;
