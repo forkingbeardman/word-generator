@@ -94,6 +94,7 @@ function my_text_finder($string)
         
         if ($arr_size_max > 1) {
             $rand_key = array_rand($matches, $arr_size_max);
+            shuffle($rand_key);
             foreach ($rand_key as $k) {
                 array_push($result, $matches[$k]);
             }
