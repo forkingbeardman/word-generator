@@ -12,6 +12,10 @@ Note that the following is a work of a person who has next to no knowledge of ph
 Current State:
 1. Does what it says above and only that.
 2. Currently supports only georgian language (however included txt dictionaries for language and georgian char list can be replaced by other languages and it would still work)
+3. Supports Old Georgian ("Asomtavruli") and Mid Georgian ("Nuskha-khutsuri") scripts
+4. Supports adding random numbers
+5. Supports random punctuation marks
+6. Word limit dropdown
 
 Issues:
 1. Georgian dictionary definitely needs improving as it contains words that are not real words in Georgian language. (fortunately can be done without modifying the code)

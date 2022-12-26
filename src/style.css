@@ -1,117 +1,75 @@
-:root {
-    --main-bg-color: rgb(236, 236, 236);
-    --accent-color: rgb(88, 131, 165);
+/* Use a responsive font size based on the viewport width */
+html {
+    font-size: calc(1rem + (1.5 - 1) * ((100vw - 300px) / (1600 - 300)));
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Use the user's preferred system font as the default font */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Verdana, sans-serif;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+/* Use a light grey as the main background color */
+body {
+    background-color: #f5f5f5;
     margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
+/* Center the wrapper element and give it a max-width */
+.wrapper {
+    max-width: 800px;
+    margin: 50px auto;
 }
 
-/* Set core root defaults */
-html:focus-within {
-    scroll-behavior: smooth;
+
+/* Use a white background for the user input container and give it some padding */
+.user-input {
+    background-color: white;
+    padding: 1rem;
 }
 
-/* Set core body defaults */
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+/* Use a light grey background for the text output container and give it some padding */
+.text-output {
+    background-color: #f5f5f5;
+    padding: 1rem;
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
+
 a {
     text-decoration: none;
-    color: var(--accent-color);
-}
-/* Make images easier to work with */
-img,
-picture {
-    max-width: 100%;
-    display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-    font: inherit;
+/* Use a dark grey as the accent color */
+:root {
+    --accent-color: #333;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+/* Style the form elements */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-/* end of reset */
-
-body {
-    background-color: var(--main-bg-color);
-    margin: 0;
-    padding: 0;
+/* Style the input field */
+.input-field {
     width: 100%;
-    font-size: large;
-}
-
-.wrapper {
-    width: 60%;
-    min-height: 400px;
-    padding: 5px;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-
-    /* position the div in center */
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
 }
 
-input-field {
+input {
     width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
 }
 
-
-input:focus-visible {
+/* Add a dark grey underline to the input field when it is focused */
+input:focus {
     outline: none;
 }
 
@@ -119,103 +77,106 @@ input:focus~.underline {
     background-color: var(--accent-color);
 }
 
+/* Style the underline */
 .underline {
     transition: color 0.3s, background 0.3s, border 0.3s, text-shadow 0.3s;
     z-index: 0;
     height: 5px;
     margin-top: -4px;
     width: 100%;
-
 }
 
-.form-control {
-    border: 0;
-    background-color: var(--main-bg-color);
-    text-align: center;
-    width: 100%;
-}
-
-
-
-.user-input {
-    text-align: center;
-    position: relative;
-
-}
-
-.text-output {
-    margin-top: 50px;
-    position: relative;
-    text-align: center;
-    padding: 20px;
-}
-
-.text-wrapper {
-    width: 100%;
-}
-
-[class^=text-wrapper] {
-    height: 100%;
-    position: relative;
-}
-
-[class^=text-wrapper]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 100vw;
-    background: rgb(231, 231, 231);
-    z-index: -1;
-}
-
+/* Style the buttons */
 .buttons-wrap {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 1rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
+
 
 .buttons {
     display: flex;
+    align-items: stretch;
+    /* justify-content: space-between; */
 }
 
 .btn {
-    border: 0;
-    max-width: 140px;
-    width: 140px;
-    height: 30px;
+    align-items: center;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
     color: var(--accent-color);
-    text-decoration: none;
-}
-
-.btn input {
     background-color: inherit;
-    border: inherit;
-    padding: 0;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Style the clear button */
+.clear {
+    text-decoration: none;
     color: var(--accent-color);
+    /* or any other color you want */
 }
 
-.btn input:hover {
-    cursor:pointer;
-    color: rgb(83, 83, 83);
+/* Style the additional options */
+.add-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.dummy {
-    color:rgb(175, 175, 175);
+
+.add-options label {
+    font-size: 1rem;
+    margin-right: 0.5rem;
 }
 
-.footer {
+.add-options input[type="checkbox"],
+.add-options select {
+    margin-right: 1rem;
+}
+
+/* Style the select element */
+select {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Style the checkbox and radio input elements */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 0.5rem;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    border: 2px solid var(--accent-color);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+}
+
+
+footer {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     background-color: var(--accent-color);
-    color: rgb(204, 204, 204);
-    text-align: center;
-    font-weight: 100;
-    font-size: smaller;
-  }
+    color: white;
+    /* other styles */
+}
