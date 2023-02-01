@@ -1,182 +1,358 @@
-/* Use a responsive font size based on the viewport width */
-html {
-    font-size: calc(1rem + (1.5 - 1) * ((100vw - 300px) / (1600 - 300)));
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@500&display=swap');
+
+html,
+body * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans Georgian', sans-serif;
 }
 
-/* Use the user's preferred system font as the default font */
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Verdana, sans-serif;
+    margin-bottom: 20px;
+    /* footer height */
 }
 
-/* Use a light grey as the main background color */
+.footer {
+    left: 0px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    background-color: rgb(199, 217, 255);
+}
+
+.footer-text {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 37px;
+    ;
+}
+
+
 body {
-    background-color: #f5f5f5;
-    margin: 0;
+    background-color: #aec6cf;
+    background-size: cover;
 }
 
-/* Center the wrapper element and give it a max-width */
-.wrapper {
-    max-width: 800px;
-    margin: 50px auto;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    /* padding-top: 60px; */
+    padding-bottom: 100px;
+}
+
+.frame {
+    max-height: 300px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px;
+    transition: all .5s ease;
+
+}
+
+.text-frame {
+    max-width: 100%;
+    padding: 0 37px 80px 37px;
+    color: rgba(0, 0, 0, 0.774);
+    display: inline-block;
 }
 
 
-/* Use a white background for the user input container and give it some padding */
-.user-input {
-    background-color: white;
-    padding: 1rem;
+
+
+li {
+    padding-left: 10px;
+    font-size: 18px;
+    display: inline;
+    text-align: left;
+    text-transform: uppercase;
+    padding-right: 10px;
+    color: #ffffff;
 }
 
-/* Use a light grey background for the text output container and give it some padding */
-.text-output {
-    background-color: #f5f5f5;
-    padding: 1rem;
+
+.form-signin {
+    width: 100%;
+    height: 375px;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 55px;
+    transition: opacity .5s ease, transform .5s ease;
 }
 
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Use a dark grey as the accent color */
-:root {
-    --accent-color: #333;
-}
-
-/* Style the form elements */
-form {
+.cb_cust {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 40px 0 0 0;
 }
 
-/* Style the input field */
-.input-field {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+@media (max-width: 920px) {
+    .cb_cust {
+        flex-direction: column;
+        padding: auto;
+    }
 }
 
-input {
+.form-signin input {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.form-styling {
+    display: block;
     width: 100%;
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    height: 35px;
+    padding-left: 15px;
     border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, .5);
     text-align: center;
 }
 
-/* Add a dark grey underline to the input field when it is focused */
-input:focus {
+label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    color: rgba(255, 255, 255, .7);
+    display: block;
+}
+
+:focus {
     outline: none;
 }
 
-input:focus~.underline {
-    background-color: var(--accent-color);
+.form-signin input:focus,
+textarea:focus
+{
+background: rgba(2, 2, 2, 0.3);
+border: none;
+/* padding-right: 40px; */
+transition: background .5s ease;
 }
 
-/* Style the underline */
-.underline {
-    transition: color 0.3s, background 0.3s, border 0.3s, text-shadow 0.3s;
-    z-index: 0;
-    height: 5px;
-    margin-top: -4px;
-    width: 100%;
-}
-
-/* Style the buttons */
-.buttons-wrap {
-    width: 100%;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.buttons {
-    display: flex;
-    align-items: stretch;
-    /* justify-content: space-between; */
-}
-
-.btn {
-    align-items: center;
-    border-radius: 0.25rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    cursor: pointer;
-    color: var(--accent-color);
-    background-color: inherit;
-    padding: 0.75rem 1.5rem;
-}
-
-/* Style the clear button */
-.clear {
-    text-decoration: none;
-    color: var(--accent-color);
-    /* or any other color you want */
-}
-
-/* Style the additional options */
-.add-options {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-
-.add-options label {
-    font-size: 1rem;
-    margin-right: 0.5rem;
-}
-
-.add-options input[type="checkbox"],
-.add-options select {
-    margin-right: 1rem;
-}
-
-/* Style the select element */
-select {
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    border: none;
-    background-color: transparent;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-/* Style the checkbox and radio input elements */
-input[type="checkbox"] {
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
     display: none;
 }
 
-input[type="checkbox"] {
-    display: inline-block;
-    margin-right: 0.5rem;
-    content: "";
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 0.25rem;
-    border: 2px solid var(--accent-color);
-    vertical-align: middle;
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 75px;
+    padding-top: 2px;
     cursor: pointer;
+    margin-top: 8px;
 }
 
-input[type="checkbox"]:checked {
-    background-color: var(--accent-color);
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before,
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after {
+    content: '';
+    position: absolute;
+}
+
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before {
+    width: 65px;
+    height: 30px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 15px;
+    left: 0;
+    top: -3px;
+    transition: all .2s ease;
+}
+
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 50%;
+    top: 7px;
+    left: 10px;
+    transition: all .2s ease;
+}
+
+/* on checked */
+[type="checkbox"]:checked+label:before {
+    background: rgba(82, 133, 252, 0.8)
+}
+
+[type="checkbox"]:checked+label:after {
+    background: #ffffff;
+    top: 7px;
+    left: 45px;
+}
+
+[type="checkbox"]:checked+label .ui,
+[type="checkbox"]:not(:checked)+label .ui:before,
+[type="checkbox"]:checked+label .ui:after {
+    position: absolute;
+    left: 6px;
+    width: 65px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    transition: all .2s ease;
+}
+
+[type="checkbox"]:not(:checked)+label .ui:before {
+    content: "";
+    left: 32px;
+    color: rgba(255, 255, 255, .7);
+}
+
+[type="checkbox"]:checked+label .ui:after {
+    content: "";
+    color: #ffffff;
+}
+
+[type="checkbox"]:focus+label:before {
+    box-sizing: border-box;
+    margin-top: -1px;
 }
 
 
-footer {
-    position: fixed;
-    bottom: 0;
+.btn-signin {
+    float: left;
+    text-transform: uppercase;
     width: 100%;
-    background-color: var(--accent-color);
-    color: white;
-    /* other styles */
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    margin-top: -30px;
+    background-color: rgba(82, 133, 252, 0.8);
+    color:#ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+
+
+.btn-animate {
+    /* float: left; */
+    color: rgba(255, 255, 255, 1);
+    padding-top: 30px;
+    width: 20%;
+    min-width: 150px;
+    height: 35px;
+
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+a.btn-signup:hover,
+a.btn-signin:hover {
+    cursor: pointer;
+    background-color: #0F4FE6;
+    transition: background-color .5s;
+}
+
+
+h1 {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/* refresh button styling */
+
+#refresh {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+    padding: 13px 0 0 13px;
+}
+
+.refreshicon {
+    fill: #d3d3d3;
+    transform: rotate(0deg);
+    transition: fill .25s ease, transform .25s ease;
+}
+
+.refreshicon:hover {
+    cursor: pointer;
+    fill: #1059FF;
+    transform: rotate(180deg);
+}
+
+
+
+/* LIST ITEMS */
+
+.select--white:after,
+.select--white select {
+    color: black;
+    background-color: rgb(255, 255, 255, .2);
+
+}
+
+.select--white:after {
+    width: 35px;
+    border: 0;
+    border-radius: 0 20px 20px 0;
+    border-left: 0;
+}
+
+.select--white:hover:after,
+.select--white:hover select {
+    background-color: #ffffff;
+}
+
+.select--white select {
+    padding: 5px 10px;
+    /* padding-right: 35px; */
+    border: 0;
+    border-radius: 20px;
+    color: black;
+}
+
+.wordcount {
+    padding-top: 10px;
+    margin: 5px 1px 1px 1px;
+    /* width: 100%; */
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    align-items: center;
+    text-align: left;
+}
+
+.wordcount label {
+    float: right;
+    height: 30px;
+    padding-left: 10px;
+    /* position: absolute; */
+}
+
+.language {
+    float: right;
+    padding: 20px 37px 40px 0;
 }
