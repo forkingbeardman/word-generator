@@ -14,4 +14,6 @@ $lang["emptyinput"] = "At least give me something to search!";
 $lang["ka"] = "Georgian";
 $lang["en"] = "English";
 $lang["fr"] = "French";
-$lang["lang"] ="Language";
+$lang["lang"] ="Lang";
+$lang["pagetitle"] = "Text Generator";
+$lang["action"] ="GENERATE";

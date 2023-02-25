@@ -11,11 +11,12 @@ Note that the following is a work of a person who has next to no knowledge of ph
 
 Current State:
 1. Does what it says above and only that.
-2. Currently supports only georgian language (however included txt dictionaries for language and georgian char list can be replaced by other languages and it would still work)
+2. Currently supports only georgian language (however included txt dictionaries for language and georgian char list can be replaced by other languages and it should still work)
 3. Supports Old Georgian ("Asomtavruli") and Mid Georgian ("Nuskha-khutsuri") scripts
 4. Supports adding random numbers
 5. Supports random punctuation marks
 6. Word limit dropdown
+7. somewhat responsive design
 
 Issues:
 1. Georgian dictionary definitely needs improving as it contains words that are not real words in Georgian language. (fortunately can be done without modifying the code)
@@ -26,4 +27,5 @@ my greatest thanks goes to:
  * TheMathewNorman for his Substring-Search project which helped me figure out how to load txt dict into an array.
  * akalongman for his amazing 193k+ list of words.
  * stackoverflow community for having asked and aswered every question i had
-my 
+ * my brother for designing desktop and mobile UI and sorry for butchering it ))))
+
