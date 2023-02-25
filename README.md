@@ -24,8 +24,9 @@ Issues:
 
 my greatest thanks goes to:
  * Miguel Sousa for amazing tool
- * TheMathewNorman for his Substring-Search project which helped me figure out how to load txt dict into an array.
+ * TheMathewNorman for his Substring-Search project which helped me get started
  * akalongman for his amazing 193k+ list of words.
+  * my brother for designing desktop and mobile UI and sorry for butchering it ))))
  * stackoverflow community for having asked and aswered every question i had
- * my brother for designing desktop and mobile UI and sorry for butchering it ))))
+
 
