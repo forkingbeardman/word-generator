@@ -161,7 +161,7 @@ select {
 }
 
 select:hover {
-    background-color: var(--hover);
+    background-color: var(--hover2);
 }
 
 .language {
@@ -282,6 +282,10 @@ h1 {
 
     select {
         background: var(--accent);
+    }
+    
+    select:hover {
+        background-color: var(--hover);
     }
 }
 
