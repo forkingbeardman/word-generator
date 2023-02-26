@@ -11,9 +11,11 @@ $vb['options'] = get_options();
 $vb['chars'] = null;
 $vb['w_count'] = get_word_count();
 $vb['geoscript'] = get_geo_script();
-$var = set_language();
+$vb['lang'] = set_language();
+$var = get_language_file($vb['lang']);
 require(__DIR__ . "/lang/$var");
 //print_r(get_languages());
+
 
 if (isset($_POST['submit'])) {
 	//be sure to validate and clean your variables

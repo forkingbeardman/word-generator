@@ -9,9 +9,9 @@
         <?php endif ?>
     <?php endforeach ?>
     <div class="box">
-        <label for="wordcount"><span class="dropdown"></span><?= _l("wordcount") ?></label>
+        <label for="wordcount"><span></span><?= _l("wordcount") ?></label>
         <span class=""></span>
-        <select id="wordcount" name="wordcount" class="">
+        <select id="wordcount" name="wordcount" class="dropdown">
             <?php
             foreach ($vb['w_count'] as $sOption) {
                 $sSel = $sOption == $vb['options']['wordcount'] ? 'selected="selected"' : "";
