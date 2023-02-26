@@ -161,7 +161,7 @@ select {
 }
 
 select:hover {
-    background-color: var(--hover2);
+    cursor: pointer;
 }
 
 .language {
@@ -227,12 +227,12 @@ select:hover {
 .bottomnav {
     z-index: 1;
     position: fixed;
-    top: calc(var(--sidenav-height) - 20px);
+    bottom: 20px;
     left: var(--padding);
     display: grid;
     justify-content: left;
     grid-template-columns: 1fr;
-    width: var(--column1width);
+    width: calc(var(--column1width) - var(--padding)*2);
     vertical-align: middle;
 
 }
@@ -284,9 +284,7 @@ h1 {
         background: var(--accent);
     }
 
-    select:hover {
-        background-color: var(--hover);
-    }
+
 }
 
 
