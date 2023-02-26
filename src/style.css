@@ -4,6 +4,8 @@
     --primary: rgb(255, 255, 255);
     --secondary: rgb(232, 232, 232);
     --accent: rgb(17, 17, 17);
+    --hover:rgb(68, 68, 68);
+    --hover2:rgb(177, 177, 177);
     --column1width: 25%;
     --sidenav-height: 93%;
     --padding: 64px;
@@ -102,21 +104,25 @@ input[type=checkbox] {
 
 .toggle {
     cursor: pointer;
-    width: 50px;
-    height: 25px;
+    width: 56px;
+    height: 24px;
     background: var(--primary);
     display: block;
     border-radius: 100px;
     position: relative;
 }
 
+.toggle:hover {
+    background-color: var(--hover2);
+}
+
 .toggle:after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 15px;
-    height: 15px;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
     background: var(--accent);
     border-radius: 50%;
     transition: 0.3s;
@@ -127,7 +133,7 @@ input:checked+.toggle {
 }
 
 input:checked+.toggle:after {
-    left: calc(100% - 5px);
+    left: calc(100% - 4px);
     transform: translateX(-100%);
     background: var(--primary);
 }
@@ -144,10 +150,14 @@ input:checked+.toggle:after {
 
 select {
     border-radius: 100px;
-    width: 50px;
-    height: 25px;
+    width: 56px;
+    height: 24px;
     border: 0;
     background: var(--primary);
+}
+
+.dropdown {
+    padding-left: 4px;
 }
 
 .language {
@@ -157,28 +167,38 @@ select {
     vertical-align: middle;
 }
 
+.languagedrop {
+    vertical-align: middle;
+}
+
+.languagedrop form {
+    margin: 0;
+    padding: 0 0 0 25px;
+}
 
 
 .languagedrop select {
     background-color: var(--secondary);
     color: var(--accent);
-    width: 70px;
+    width: 60px;
 }
 
 .icon {
     position: relative;
-    padding-right: 20px;
 }
 
-.icon i {
+.icon svg {
     position: absolute;
+    width: 16px;
+    height: 16px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -53%);
 }
 
 
 .btn {
+    cursor: pointer;
     background-color: var(--accent);
     color: var(--primary);
     height: 40px;
@@ -186,8 +206,14 @@ select {
     font-weight: 800;
 }
 
+.btn:hover {
+    background-color: var(--hover);
+}
+
 .footer {
     padding-top: 10px;
+    padding-left: 0;
+    margin-left: 0;
     font-size: 10px;
     vertical-align: middle;
     height: 25px;
@@ -203,6 +229,7 @@ select {
     grid-template-columns: 1fr;
     width: var(--column1width);
     vertical-align: middle;
+
 }
 
 
@@ -244,6 +271,8 @@ h1 {
         --primary: rgb(30, 30, 30);
         --secondary: rgb(17, 17, 17);
         --accent: rgb(232, 232, 232);
+        --hover:rgb(180,180,180);
+        --hover2:rgb(68, 68, 68);
     }
 
     select {

@@ -1,11 +1,13 @@
 <?php
 
-function is_post() {
+function is_post()
+{
     return filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'POST';
 }
 
-function is_get() {
-    return filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'GET' ;
+function is_get()
+{
+    return filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'GET';
 }
 
 function view($name, $model)
@@ -28,18 +30,26 @@ function get_languages()
     return $langs;
 }
 
+
 function set_language()
 {
     $langs = get_languages();
-    if (isset($_GET['lang'])) {
-        $lang_param = htmlentities($_GET['lang']);
+    if (isset($_POST['lang'])) {
+        $lang_param = htmlentities($_POST['lang']);
         foreach ($langs as $lang => $lang_file) {
             if ($lang_param == $lang) {
-                return $lang_file;
+                return $lang;
             }
         }
     }
-    return "ka_GE.php";
+    return "ka";
+}
+
+
+function get_language_file($language)
+{
+    $langs = get_languages();
+    return $langs[$language];
 }
 
 //translation
