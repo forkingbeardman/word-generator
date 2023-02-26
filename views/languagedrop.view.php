@@ -5,5 +5,4 @@
         <option value="?lang=<?= $lang ?>" <?= $sSel?>><?= _l($lang) ?></option>
     <?php endforeach ?>
 </select>
-</div>
 </form>
