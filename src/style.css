@@ -4,8 +4,8 @@
     --primary: rgb(255, 255, 255);
     --secondary: rgb(232, 232, 232);
     --accent: rgb(17, 17, 17);
-    --hover:rgb(68, 68, 68);
-    --hover2:rgb(177, 177, 177);
+    --hover: rgb(68, 68, 68);
+    --hover2: rgb(177, 177, 177);
     --column1width: 25%;
     --sidenav-height: 93%;
     --padding: 64px;
@@ -276,14 +276,14 @@ h1 {
         --primary: rgb(30, 30, 30);
         --secondary: rgb(17, 17, 17);
         --accent: rgb(232, 232, 232);
-        --hover:rgb(180,180,180);
-        --hover2:rgb(68, 68, 68);
+        --hover: rgb(180, 180, 180);
+        --hover2: rgb(68, 68, 68);
     }
 
     select {
         background: var(--accent);
     }
-    
+
     select:hover {
         background-color: var(--hover);
     }
@@ -294,7 +294,7 @@ h1 {
 
     :root {
         --column1width: 40%;
-        --padding:48px
+        --padding: 48px
     }
 
     .column-2 {
@@ -313,12 +313,13 @@ h1 {
 @media only screen and (max-width: 900px) {
     :root {
         --column1width: 100%;
-        --padding:64px
+        --padding: 64px
     }
 
     .column-1 {
         position: relative;
     }
+
     .column-2 {
         padding-left: var(--padding);
         padding-right: var(--padding);
@@ -333,12 +334,35 @@ h1 {
     .container {
         display: grid;
     }
+
     .bottomnav {
         position: relative;
-        top:0;
+        top: 0;
     }
 
     .languagedrop select {
         background-color: var(--primary);
     }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: var(--hover2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover);
 }
