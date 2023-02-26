@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "inc/includes.php";
 header('Content-Type: text/html; charset=utf-8');
 
@@ -11,13 +11,14 @@ $vb['options'] = get_options();
 $vb['chars'] = null;
 $vb['w_count'] = get_word_count();
 $vb['geoscript'] = get_geo_script();
+//set language
 $vb['lang'] = set_language();
 $var = get_language_file($vb['lang']);
 require(__DIR__ . "/lang/$var");
 //print_r(get_languages());
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['generate'])) {
 	//be sure to validate and clean your variables
 	$chars = htmlentities($_POST['chars']);
 
@@ -28,6 +29,6 @@ if (isset($_POST['submit'])) {
 	}
 
 	$vb['chars'] = $chars;
-	
 }
 view('index', $vb);
+echo $_SESSION['lang'];

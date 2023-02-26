@@ -34,8 +34,8 @@ function get_languages()
 function set_language()
 {
     $langs = get_languages();
-    if (isset($_POST['lang'])) {
-        $lang_param = htmlentities($_POST['lang']);
+    if (isset($_GET['lang'])) {
+        $lang_param = htmlentities($_GET['lang']);
         foreach ($langs as $lang => $lang_file) {
             if ($lang_param == $lang) {
                 return $lang;
