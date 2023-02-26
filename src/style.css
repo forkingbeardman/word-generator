@@ -160,6 +160,10 @@ select {
     padding-left: 4px;
 }
 
+select:hover {
+    background-color: var(--hover);
+}
+
 .language {
     display: grid;
     justify-content: left;
@@ -194,6 +198,7 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(0%, -53%);
+    fill: var(--accent);
 }
 
 
