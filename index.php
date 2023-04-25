@@ -31,4 +31,3 @@ if (isset($_POST['generate'])) {
 	$vb['chars'] = $chars;
 }
 view('index', $vb);
-echo $_SESSION['lang'];
