@@ -2,7 +2,7 @@
 
 <head>
     <title>Georgian Words Generator</title>
-    <link rel="stylesheet" type="text/css" href="./src/style2.css">
+    <link rel="stylesheet" type="text/css" href="./src/style.css">
     <meta charset="UTF-8">
     <meta name="keywords" content="Georgian, Words, Generator, Alphabet, Typography, Help, Placehoplder, Text">
     <meta name="author" content="ForkingBeardman">
