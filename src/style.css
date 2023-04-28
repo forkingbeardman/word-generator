@@ -18,7 +18,6 @@ body * {
 
 
 body {
-
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
@@ -93,6 +92,7 @@ input {
     border-radius: 100px;
     border: 0;
     width: 100%;
+    font-family: 'Noto Sans Georgian', sans-serif;
 }
 
 input[type=checkbox] {
@@ -145,6 +145,7 @@ input:checked+.toggle:after {
 .searchbox {
     text-align: center;
     height: 40px;
+    font-weight: 700;
 }
 
 
@@ -154,6 +155,7 @@ select {
     height: 24px;
     border: 0;
     background: var(--primary);
+    font-family: 'Noto Sans Georgian', sans-serif;
 }
 
 .dropdown {
@@ -162,43 +164,6 @@ select {
 
 select:hover {
     cursor: pointer;
-}
-
-.language {
-    display: grid;
-    justify-content: left;
-    grid-auto-flow: column;
-    vertical-align: middle;
-}
-
-.languagedrop {
-    vertical-align: middle;
-}
-
-.languagedrop form {
-    margin: 0;
-    padding: 0 0 0 25px;
-}
-
-
-.languagedrop select {
-    background-color: var(--secondary);
-    color: var(--accent);
-    width: 60px;
-}
-
-.icon {
-    position: relative;
-}
-
-.icon svg {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 50%;
-    left: 50%;
-    transform: translate(0%, -53%);
-    fill: var(--accent);
 }
 
 
@@ -244,33 +209,42 @@ h1 {
 }
 
 /* refresh button styling */
-
 #refresh {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--accent);
+    background-color: var(--secondary);
     width: 50px;
     height: 50px;
     border-radius: 25px;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
-    padding: 13px 0 0 13px;
+    padding: 12px 0 0 13px;
 }
 
 .refreshicon {
-    fill: #d3d3d3;
+    color: var(--hover2);
     transform: rotate(0deg);
     transition: fill .25s ease, transform .25s ease;
+    width: 24px;
+    height: 26px;
+
 }
 
 .refreshicon:hover {
     cursor: pointer;
-    fill: var(--primary);
+    color: var(--hover);
     transform: rotate(180deg);
 }
 
+.refreshicon i {
+    font-size: 24px;;
+    width: 24px;
+    height: 24px;
+}
 
-@media (prefers-color-scheme: dark) {
+
+
+/* @media (prefers-color-scheme: dark) {
     :root {
         color: #fff;
         --primary: rgb(30, 30, 30);
@@ -283,10 +257,70 @@ h1 {
     select {
         background: var(--accent);
     }
+} */
 
-
+/* NIGHT MODE SWITCHER */
+.toggledark {
+    margin: auto 0;
+    font-size: 20px;
+    transform: rotate(0deg);
+    transition: transform .25s ease;
 }
 
+.toggledark:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+
+.night {
+    color: #fff;
+    --primary: rgb(30, 30, 30);
+    --secondary: rgb(17, 17, 17);
+    --accent: rgb(232, 232, 232);
+    --hover: rgb(180, 180, 180);
+    --hover2: rgb(49, 49, 49);
+}
+
+.night select {
+    background: var(--accent);
+}
+
+/* LANGUAGE SWITCHER */
+.language {
+    display: grid;
+    justify-content: left;
+    grid-auto-flow: column;
+    vertical-align: middle;
+    height:24px;
+}
+
+
+.languagedrop form {
+    position: relative;
+    margin: auto 0;
+    padding: 0 0 0 5px;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    vertical-align: middle;
+}
+
+.languagedrop form::before {
+    content: "";
+    background-color: var(--accent);
+    width: 1px;
+    height: 100%;
+    display: inline-block;
+    margin: auto 0;
+}
+
+.languagedrop select {
+    margin: auto 0;
+    background-color: var(--secondary);
+    color: var(--accent);
+    width: 40px;
+}
 
 @media only screen and (max-width: 1320px) {
 
