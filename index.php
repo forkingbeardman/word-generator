@@ -27,6 +27,11 @@ if (isset($_POST['generate'])) {
 			$vb['options'][$op] = htmlentities($_POST[$op]);
 		}
 	}
+	if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] === UPLOAD_ERR_OK) {
+		//unset($_FILES['fileToUpload']);
+	} else {
+		//unset($_FILES['fileToUpload']);
+	}
 
 	$vb['chars'] = $chars;
 }
