@@ -17,6 +17,8 @@ Current State:
 5. Supports random punctuation marks
 6. Word limit dropdown
 7. somewhat responsive design
+8. upload custom font for testing (slightly buggy)
+9. Adjust Font  Size/Weight/Width/Spacing and Line Height 
 
 Issues:
 1. Georgian dictionary definitely needs improving as it contains words that are not real words in Georgian language. (fortunately can be done without modifying the code)
