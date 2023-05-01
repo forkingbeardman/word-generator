@@ -4,7 +4,7 @@
     --primary: rgb(255, 255, 255);
     --secondary: rgb(232, 232, 232);
     --accent: rgb(17, 17, 17);
-    --hover: rgb(68, 68, 68);
+    --hover: rgb(87, 87, 87);
     --hover2: rgb(177, 177, 177);
     --column1width: 25%;
     --sidenav-height: 93%;
@@ -74,7 +74,7 @@ body {
 }
 
 .addOptions {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
 }
 
 .box {
@@ -87,6 +87,8 @@ body {
     grid-auto-rows: 30px;
     font-size: 16px;
 }
+
+
 
 input {
     border-radius: 100px;
@@ -155,6 +157,7 @@ select {
     height: 24px;
     border: 0;
     background: var(--primary);
+    color: var(--accent);
     font-family: 'Noto Sans Georgian', sans-serif;
 }
 
@@ -163,6 +166,7 @@ select {
 }
 
 select:hover {
+    background: var(--hover2);
     cursor: pointer;
 }
 
@@ -180,6 +184,108 @@ select:hover {
     background-color: var(--hover);
 }
 
+/*********************** SLIDER  *********************/
+.slider-box {
+    vertical-align: middle;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+.fontSliderLabel {
+    margin: auto 0;
+}
+
+.fontSliderValue {
+    border-radius: 100px;
+    width: 56px;
+    height: 24px;
+    border: 0;
+    background: var(--primary);
+    text-align: center;
+    padding: 3px 0 0 0;
+    font-size: 13.3px;
+    margin: auto 0;
+}
+
+.fontSlider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 90%;
+    height: 5px;
+    background: var(--hover2);
+    outline: none;
+    margin: auto 0;
+}
+
+.fontSlider:hover {
+    opacity: 1;
+    background: var(--hover);
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.fontSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: var(--accent);
+    cursor: pointer;
+}
+
+.fontSlider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: var(--accent);
+    cursor: pointer;
+}
+
+/*********************** File Load  *********************/
+
+
+.clearFont {
+    border-radius: 100px;
+    width: 56px;
+    height: 24px;
+    border: 0;
+    background: var(--primary);
+    padding: 3px 0 0 0px;
+    text-align: center;
+    font-size: 12px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.clearFont:hover {
+    background: var(--hover2);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    width: 94%;
+    border-radius: 100px;
+    vertical-align: middle;
+    margin: auto 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    background: var(--hover2);
+}
+.custom-file-upload i {
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-right: 10px;
+    
+}
+
+/*********************** Footer  *********************/
 .footer {
     padding-top: 10px;
     padding-left: 0;
@@ -208,7 +314,7 @@ h1 {
     margin: 0 0 50px 0;
 }
 
-/* refresh button styling */
+/***************** refresh button styling *********************/
 #refresh {
     position: fixed;
     bottom: 20px;
@@ -237,7 +343,8 @@ h1 {
 }
 
 .refreshicon i {
-    font-size: 24px;;
+    font-size: 24px;
+    ;
     width: 24px;
     height: 24px;
 }
@@ -278,12 +385,12 @@ h1 {
     --primary: rgb(30, 30, 30);
     --secondary: rgb(17, 17, 17);
     --accent: rgb(232, 232, 232);
-    --hover: rgb(180, 180, 180);
+    --hover: rgb(156, 156, 156);
     --hover2: rgb(49, 49, 49);
 }
 
 .night select {
-    background: var(--accent);
+    background: var(--primary);
 }
 
 /* LANGUAGE SWITCHER */
@@ -292,7 +399,7 @@ h1 {
     justify-content: left;
     grid-auto-flow: column;
     vertical-align: middle;
-    height:24px;
+    height: 24px;
 }
 
 
